@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { BiSearch } from 'react-icons/bi'
 
 function SearchOrder() {
     const [query, setQuery] = useState("");
@@ -13,17 +14,18 @@ function SearchOrder() {
     }
 
   return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='relative'>
           <input
               placeholder='Search order #'
               value={query}
               onChange={e => setQuery(e.target.value)}
-              className='rounded-full px-4 py-2 text-sm bg-yellow-100
-              placeholder:text-stone-400 w-28 sm:w-64 
-              focus:outline-none sm:focus:w-72 transition-all 
+              className='rounded-md px-4 py-2.5 text-sm bg-gray-100
+              placeholder:text-stone-400 w-96 sm:w-96 
+              focus:outline-none sm:focus:w-96 transition-all 
               duration-300 focus:ring focus:ring-yellow-500 
               focus:ring-opacity-50'
           />
+          <span className='absolute right-2 top-3'><BiSearch className='text-xl'/></span>
           
     </form>
   )

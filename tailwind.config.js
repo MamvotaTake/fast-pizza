@@ -7,9 +7,13 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: 'Roboto Mono, monospace'
+      sans: 'Poppins'
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'smallBanner': "url('./public/smallBanner.svg')",
+      }
+    },
   },
   plugins: [],
 }

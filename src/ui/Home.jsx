@@ -2,11 +2,13 @@ import React from 'react';
 import CreateUser from '../features/user/CreateUser';
 import { useSelector } from 'react-redux';
 import Button from './Button';
+import Banner from './Banner';
 
 function Home() {
   const username = useSelector(state => state.user.username)
   return (
-    <div className='my-10 text-center sm:my-16 px-4'>
+    <div className='text-center my-2 sm:my-8 px-4'>
+      <Banner/>
       <h1 className='text-xl font-semibold text-center mb-8'>
         The best pizza.
         <br />
