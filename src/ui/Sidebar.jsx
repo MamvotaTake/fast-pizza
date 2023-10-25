@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { GiFullPizza } from 'react-icons/gi'
-import { MdOutlineMoreTime } from 'react-icons/md'
+import { MdOutlineFavoriteBorder, MdOutlineMoreTime } from 'react-icons/md'
 import { TbSettingsCog } from 'react-icons/tb'
 import Button from './Button'
 // import mask from '../../public/smallBanner.svg'
@@ -24,6 +24,12 @@ function Sidebar() {
                         <span>
                             <MdOutlineMoreTime className='text-zinc-500 text-lg' />
                         </span> Order History
+                    </Link>
+                    <Link to='/wishlist'
+                        className='flex items-center gap-2 hover:bg-yellow-500 py-2 px-2 hover:rounded hover:text-white transition-all duration-500'>
+                        <span>
+                            <MdOutlineFavoriteBorder className='text-zinc-500 text-lg' />
+                        </span> Favourites
                     </Link>
                 </div>
                 <div className='flex flex-col justify-between mb-8'>

@@ -7,6 +7,7 @@ import Cart from './features/cart/Cart'
 import Menu, {loader as menuLoader} from './features/menu/Menu'
 import CreateOrder, {actions as createOrderAction} from './features/order/CreateOrder'
 import Order,{loader as orderLoader} from './features/order/Order'
+import Wishlist from './features/wishlist/Wishlist'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <Cart/>
+      },
+      {
+        path: '/wishlist',
+        element: <Wishlist/>
       },
 
       {
