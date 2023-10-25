@@ -1,13 +1,17 @@
 import React from "react";
 import {getMenu} from '../../services/apiRestaurant'
 import { useLoaderData } from "react-router-dom";
-import MenuItem from '../menu/MenuItem'
+// import MenuItem from '../menu/MenuItem'
+import Card from '../../ui/Card'
 
 function Menu() {
   const menu = useLoaderData();
-  return <ul className="divide-y divide-stone-200 px-2">
-    {menu.map(pizza => <MenuItem pizza={pizza} key={pizza.id} />)}
-  </ul>;
+  return <>
+    <h1 className='font-bold text-2xl mb-4'>Our Dishes</h1>
+    <div className='grid grid-cols-3 gap-2 sm:grid-cols-3 sm:grid'>
+      {menu.map(item => <Card item={item} key={item.id} />)}
+    </div>
+  </>
 }
 
 export async function loader() {

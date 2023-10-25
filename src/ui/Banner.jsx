@@ -7,7 +7,7 @@ import { BiInfoCircle } from 'react-icons/bi'
 
 function Banner() {
   return (
-    <div className=' relative flex md:w-full justify-between items-center bg-yellow-500 rounded-md text-white mb-8'>
+    <div className=' flex md:w-full justify-between items-center bg-yellow-500 rounded-md text-white mb-8'>
       <Tooltip message="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, fugiat 🚀">
           <BiInfoCircle className='cursor-pointer text-2xl' />
       </Tooltip>

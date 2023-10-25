@@ -9,7 +9,7 @@ import vector from '../../public/vector.svg'
 
 function Sidebar() {
     return (
-        <sidebar className="items-center space-y-2 uppercase px-4 py-6 border-b-1 border-stone-500 sm:px-6">
+        <div className="items-center space-y-2 uppercase px-4 py-6 border-b-1 border-stone-500 sm:px-6">
             <Link to='/' className='tracking-widest font-bold'>Fast Pizza Cos<span className='font-bold text-[1.4rem] text-yellow-500'>.</span> </Link>
             <div className='flex flex-col h-full justify-between capitalize py-5'>
                 <div className='space-y-3'>
@@ -42,7 +42,7 @@ function Sidebar() {
                     
                 </div>
             </div>
-        </sidebar>
+        </div>
     )
 }
 
