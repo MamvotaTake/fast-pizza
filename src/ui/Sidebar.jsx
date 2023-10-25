@@ -19,7 +19,7 @@ function Sidebar() {
                             <GiFullPizza className='hover:text-white text-zinc-500 text-lg' />
                         </span> Menu
                     </Link>
-                    <Link to='/order'
+                    <Link to='/cart'
                         className='flex items-center gap-2 hover:bg-yellow-500 py-2 px-2 hover:rounded hover:text-white transition-all duration-500'>
                         <span>
                             <MdOutlineMoreTime className='text-zinc-500 text-lg' />
@@ -27,7 +27,7 @@ function Sidebar() {
                     </Link>
                 </div>
                 <div className='flex flex-col justify-between mb-8'>
-                    <Link to='/order'
+                    <Link to='/order/new'
                         className='flex items-center gap-2 mb-8 hover:bg-yellow-500 py-2 px-2 hover:rounded hover:text-white transition-all duration-500'>
                         <span>
                             <TbSettingsCog className='text-zinc-500 text-lg' />
