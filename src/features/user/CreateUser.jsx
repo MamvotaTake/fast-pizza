@@ -21,7 +21,7 @@ function CreateUser() {
 
   return (
     <form onSubmit={handleSubmit}>
-      {!username ? <p className='mb-4 text-sm capitalize text-stone-600 md:text-base'>👋 Enter your name inorder to place an order</p> : <div className='dots-1 text-center flex justify-center mb-2'></div>}
+      {!username ? <p className='mb-4 text-sm capitalize text-stone-600 md:text-base'>👋 Enter your name to start ordering!</p> : <div className='dots-1 text-center flex justify-center mb-2'></div>}
 
       <input
         type="text"

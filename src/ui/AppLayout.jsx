@@ -10,7 +10,7 @@ function AppLayout() {
     const isLoading = navigation.state === 'loading';
 
     return (
-        <div className=' overflow-hidden grid grid-cols-[13rem_minmax(700px,_1fr)_250px] h-screen'>
+        <div className=' overflow-hidden grid md:grid-cols-[13rem_minmax(700px,_1fr)_250px] h-screen '>
             {isLoading && <Loader />}  
             <Sidebar/>
             

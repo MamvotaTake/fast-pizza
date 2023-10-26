@@ -23,7 +23,7 @@ function Home() {
           <h1 className='font-bold text-sm md:text-2xl'>Popular Dishes</h1>
           <div className='flex sm:gap-4 items-center justify-between'>
             <FilterOperations />
-            <Link to='/menu'><span className='flex items-center text-sm cursor-pointer bg-yellow-400 text-stone-50 py-1 px-1 border border-yellow-400 hover:text-stone-0 transition-all duration-300'>See More</span></Link>
+            <Link to='/menu'><span className='flex items-center text-sm cursor-pointer bg-yellow-400 text-stone-50 py-2 px-1 border border-yellow-400 hover:text-stone-0 transition-all duration-300'>See More</span></Link>
           </div>
         </div>
         <div className='grid grid-cols-2 gap-4 md:grid-cols-3'>
