@@ -9,10 +9,10 @@ function Menu() {
   const menu = useLoaderData();
   return <>
     <div className="flex  items-center justify-between">
-      <h1 className='font-bold text-2xl mb-4'>Our Dishes</h1>
+      <h1 className='font-bold  text-xs sm:text-2xl sm:flex sm:items-center sm:justify-between mb-4'>Our Dishes</h1>
       <FilterOperations />
     </div>
-    <div className='grid grid-cols-3 gap-4 md:grid-cols-3'>
+    <div className='grid grid-cols-2 gap-4 sm:grid-cols-3 sm:flex sm:items-center sm:justify-between'>
       {menu.map(item => <MenuItem item={item} key={item.id} />)}
     </div>
   </>

@@ -11,9 +11,9 @@ function Filter({filterField, options}) {
         setSearchParams(searchParams)
     }
   return (
-      <div className=' bg-yellow-500 text-white shadow-sm rounded-sm px-3 flex gap-4'>
+      <div className=' bg-yellow-500 text-white shadow-sm rounded-md px-1 sm:px-3 flex gap-4'>
           {options.map(option =>
-              <button className='bg-gray-0  cursor-pointer font-medium text-sm py-2 px-1 transition-all duration-300 hover:text-yellow-100'
+              <button className='bg-gray-0 cursor-pointer font-medium text-sm py-0 md:py-2 px-1 transition-all duration-300 hover:text-yellow-100'
                   key={option.value}
                   onClick={() => handleClick(option.value)}
                 //   active={option.value === currentFilter}

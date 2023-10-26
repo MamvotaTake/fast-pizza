@@ -14,7 +14,9 @@ import Modal from "../../ui/Modal";
 import Notifications from "../../ui/Notifications";
 import AboutDeveloper from "../../ui/AboutDeveloper";
 import take01 from '../../../public/take01.png'
-import { GiFullPizza } from "react-icons/gi";
+// import { GiFullPizza } from "react-icons/gi";
+import { RiMenu2Fill } from "react-icons/ri";
+import { GrHomeOption } from "react-icons/gr";
 
 
 function CartOverview() {
@@ -84,26 +86,33 @@ function CartOverview() {
           {username ? <Button type="primary" to="/order/new">Order Now</Button> : <CreateUser />}
         </div>
       </div >
-      <div className="flex justify-between md:hidden bg-stone-950">
-        <p className="items-center text-stone-50 font-bold py-6 px-4 sm:space-x-6 flex justify-between">
-          Total Price:
-          <span className="flex justify-between text-stone-50 px-2"> {formatCurrency(totalCartPrice)}</span>
-        </p>
-        <Link to='/menu' className="flex items-center justify-center text-center relative right-3">
-          <GiFullPizza className="relative right-2 text-2xl text-gray-0 fill-white" />
-          <span className="text-xl text-stone-50">Menu</span>
+      <div className="flex justify-between items-center md:hidden bg-stone-100 py-6 px-6">
+        <Link to='/'>
+          <GrHomeOption className="relative  text-2xl text-gray-0 text-gray-100" />
         </Link>
-        <div className="relative items-center flex gap-3">
-          <Link to='/cart' className="relative right-3">
-            <BsCartCheck className="relative right-2 text-2xl text-gray-0 fill-white" />
-            <span className="absolute bottom-3  bg-yellow-500 text-white font-semibold px-1.5 rounded-full">
-              {totalCartQuantity}
+        <Link to='/menu'>
+          <RiMenu2Fill className="relative  text-2xl text-gray-0" />
+        </Link>
+        {/* <Link to='/' className="flex items-center justify-center text-center relative right-3">
+          <GiFullPizza className="relative  text-2xl text-gray-0 " />
+        </Link> */}
+        <Modal>
+          <Modal.Open opens='notifications'>
+            <span className=" flex relative cursor-pointer">
+              <IoIosNotificationsOutline className="relative text-3xl" />
+              <span className="absolute right-0 top-0 bg-yellow-400 w-2 h-2 rounded-full"></span>
             </span>
-          </Link>
-          
-
-          
-        </div>
+          </Modal.Open>
+          <Modal.Window name="notifications">
+            <Notifications />
+          </Modal.Window>
+        </Modal>
+        <Link to='/cart' className="relative right-3">
+          <BsCartCheck className="relative right-2 text-2xl text-gray-0" />
+          <span className="absolute bottom-3  bg-yellow-500 text-white font-semibold px-1.5 rounded-full">
+            {totalCartQuantity}
+          </span>
+        </Link>
       </div>
 
     </>

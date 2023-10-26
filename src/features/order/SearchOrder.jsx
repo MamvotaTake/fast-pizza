@@ -20,7 +20,7 @@ function SearchOrder() {
               value={query}
               onChange={e => setQuery(e.target.value)}
               className='rounded-md px-4 py-2.5 text-sm bg-gray-100
-              placeholder:text-stone-400 w-96 sm:w-96 
+              placeholder:text-stone-400 w-56 sm:w-96 
               focus:outline-none sm:focus:w-96 transition-all 
               duration-300 focus:ring focus:ring-yellow-500 
               focus:ring-opacity-50'
