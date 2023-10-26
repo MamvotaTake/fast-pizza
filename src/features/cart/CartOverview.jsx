@@ -11,6 +11,8 @@ import Address from "../../ui/Address";
 import OrderMenu from "./OrderMenu";
 import Button from "../../ui/Button";
 import CreateUser from "../user/CreateUser";
+import Modal from "../../ui/Modal";
+import Notifications from "../../ui/Notifications";
 
 
 function CartOverview({pizzaId}) {
@@ -30,14 +32,30 @@ function CartOverview({pizzaId}) {
               {totalCartQuantity}
             </span>
           </Link>
-          <span className=" flex relative cursor-pointer">
-            <IoIosNotificationsOutline className="relative text-2xl text-gray-950" />
-            <span className="absolute right-0 top-0 bg-yellow-400 w-2 h-2 rounded-full"></span>
-          </span>
-          <span className=" flex relative cursor-pointer">
-            <TbSettingsStar className="relative text-2xl text-gray-950" />
-            <span className="absolute right-0 top-0 bg-red-400 w-2 h-2 rounded-full"></span>
-          </span>
+          <Modal>
+            <Modal.Open opens='notifications'>
+              <span className=" flex relative cursor-pointer">
+                <IoIosNotificationsOutline className="relative text-2xl text-gray-950" />
+                <span className="absolute right-0 top-0 bg-yellow-400 w-2 h-2 rounded-full"></span>
+              </span>
+            </Modal.Open>
+            <Modal.Window name="notifications">
+              <Notifications/>
+            </Modal.Window>
+          </Modal>
+
+          <Modal>
+            <Modal.Open opens='settings'>
+              <span className=" flex relative cursor-pointer">
+                <TbSettingsStar className="relative text-2xl text-gray-950" />
+                <span className="absolute right-0 top-0 bg-red-400 w-2 h-2 rounded-full"></span>
+              </span>
+            </Modal.Open>
+            <Modal.Window name="settings">
+              <h2 className='font-bold text-xl'>Settings</h2>
+            </Modal.Window>
+          </Modal>
+          
         </div>
         <span className="cursor-pointer"><img src={placeholder} alt="placeholder" /></span>
       </div>
