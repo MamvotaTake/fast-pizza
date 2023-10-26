@@ -6,16 +6,17 @@ import { formatCurrency } from '../../utils/helpers'
 import { BsCartCheck } from 'react-icons/bs'
 import { IoIosNotificationsOutline } from 'react-icons/io'
 import { TbSettingsStar } from 'react-icons/tb'
-import placeholder from '../../../public/placeholder.png'
 import Address from "../../ui/Address";
 import OrderMenu from "./OrderMenu";
 import Button from "../../ui/Button";
 import CreateUser from "../user/CreateUser";
 import Modal from "../../ui/Modal";
 import Notifications from "../../ui/Notifications";
+import AboutDeveloper from "../../ui/AboutDeveloper";
+import take01 from '../../../public/take01.png'
 
 
-function CartOverview({pizzaId}) {
+function CartOverview() {
   const totalCartQuantity = useSelector(getTotalCartQuantity)
   const totalCartPrice = useSelector(getTotalCartPrice)
   const username = useSelector(state => state.user.username)
@@ -57,7 +58,15 @@ function CartOverview({pizzaId}) {
           </Modal>
           
         </div>
-        <span className="cursor-pointer"><img src={placeholder} alt="placeholder" /></span>
+        <Modal>
+          <Modal.Open opens='notifications'>
+            <span className="cursor-pointer w-10 bg-yellow-500 rounded-full"><img className="rounded-full" src={take01} alt="placeholder" /></span>
+          </Modal.Open>
+          <Modal.Window name="notifications">
+            <AboutDeveloper />
+          </Modal.Window>
+        </Modal>
+        
       </div>
       <Address />
       <OrderMenu />
