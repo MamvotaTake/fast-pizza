@@ -16,15 +16,17 @@ function Home() {
   
   if (fetcher.state === 'loading') return <Loader/>
   return (
-    <div className='text-center my-2 md:my-2 px-4'>
+    <div className='flex flex-col text-center my-2 md:my-2 px-4'>
       <Banner />
-      <div className='relative flex flex-col items-start space-y-3'>
-        <div className=' flex items-center justify-between space-x-8'>
-          <h1 className='font-bold text-2xl'>Popular Dishes</h1>
-          <FilterOperations/>
-          <Link to='/menu'><span className='absolute right-0 text-sm text-yellow-500 cursor-pointer hover:text-yellow-600 transition-all duration-150'>See More</span></Link>
+      <div className='relative flex flex-col  space-y-3'>
+        <div className=' flex items-center gap-4 sm:gap-2 md:justify-between'>
+          <h1 className='font-bold text-sm md:text-2xl'>Popular Dishes</h1>
+          <div className='flex sm:gap-4 items-center justify-between'>
+            <FilterOperations />
+            <Link to='/menu'><span className='flex items-center text-sm cursor-pointer bg-yellow-400 text-stone-50 py-1 px-1 border border-yellow-400 hover:text-stone-0 transition-all duration-300'>See More</span></Link>
+          </div>
         </div>
-        <div className='grid grid-cols-4 gap-y-4 gap-x-6'>
+        <div className='grid grid-cols-2 gap-4 md:grid-cols-3'>
           {menu.map(item => <MenuItem key={item.id} item={item}/>).slice(0,8)}
         </div>
 

@@ -12,7 +12,7 @@ function Menu() {
       <h1 className='font-bold text-2xl mb-4'>Our Dishes</h1>
       <FilterOperations />
     </div>
-    <div className='grid grid-cols-4 gap-2 sm:grid-cols-4 sm:grid'>
+    <div className='grid grid-cols-3 gap-4 md:grid-cols-3'>
       {menu.map(item => <MenuItem item={item} key={item.id} />)}
     </div>
   </>

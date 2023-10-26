@@ -49,14 +49,14 @@ function MenuItem({ item }) {
     // }
 
     return (
-        <div className=" relative w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <img className="p-8 rounded-t-lg h-72 w-full" src={imageUrl} alt="product" />
+        <div className=" relative flex flex-col w-auto  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <img className=" flex rounded-lg  w-full" src={imageUrl} alt="product" />
             {/* {!currentWish ? (
                 <MdFavoriteBorder onClick={handleAddToWish} className='absolute top-3 right-2 text-2xl backdrop-blur-sm cursor-pointer hover:text-yellow-500 transition-all duration-300' />
             ) : <MdFavorite onClick={handleRemoveFromWish} className="absolute text-yellow-500 text-xl top-3 right-3" />} */}
             <div className="px-5 pb-5">
                 <Link>
-                    <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{name}</h5>
+                    <h5 className="mt-3 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">{name}</h5>
                 </Link>
                 <span className='flex capitalize text-sm font-light  mb-4'>{ingredients.join(', ')}</span>
                 <div className="flex items-center mt-2.5 mb-5">
@@ -78,7 +78,7 @@ function MenuItem({ item }) {
                     <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
                 </div>
 
-                <div className="mt-auto flex flex-grow items-center justify-between">
+                <div className="flex flex-grow items-center justify-between">
                     {!soldOut ? <p className="text-sm">{formatCurrency(unitPrice)}</p>
                         :
                         (
