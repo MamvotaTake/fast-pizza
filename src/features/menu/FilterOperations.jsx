@@ -4,7 +4,7 @@ import SortBy from '../../ui/SortBy'
 
 function FilterOperations() {
   return (
-    <div className='flex items-center gap-1 mb-4'>
+    <div className=' hidden md:flex items-center gap-1 mb-4'>
         <Filter
         filterField="menu"
         options={[

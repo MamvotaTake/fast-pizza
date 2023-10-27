@@ -86,7 +86,7 @@ function CartOverview() {
           {username ? <Button type="primary" to="/order/new">Order Now</Button> : <CreateUser />}
         </div>
       </div >
-      <div className="flex justify-between items-center md:hidden bg-stone-100 py-6 px-6">
+      <div className="absolute bottom-0 w-full flex justify-between items-center h-10 md:hidden bg-yellow-100 py-6 px-6">
         <Link to='/'>
           <GrHomeOption className="relative  text-2xl text-gray-0 text-gray-100" />
         </Link>

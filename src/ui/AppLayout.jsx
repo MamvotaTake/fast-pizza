@@ -16,11 +16,11 @@ function AppLayout() {
             
             <div className='overflow-y-scroll bg-zinc-200'>
                     <Header />
-                <main className=' mx-auto px-4'>
+                <main className=' mx-auto sm:px-4 mb-8'>
                     <Outlet />
                 </main>
             </div>
-            <CartOverview />
+            <CartOverview/>
 
         </div>
     )
