@@ -79,7 +79,7 @@ function CreateOrder() {
           {!position.latitude && !position.longitude && 
             <span
               disabled={isLoadingAddress}
-              className="absolute right-5 top-4 cursor-pointer md:right-3 md:top-4"
+              className="absolute right-5 top-10 cursor-pointer md:right-3 md:top-4"
               onClick={(e) => {
                 e.preventDefault();
                 dispatch(fetchAddress())
