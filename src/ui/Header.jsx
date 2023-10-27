@@ -9,7 +9,7 @@ import { getWish } from '../features/wishlist/wishSlice'
 function Header() {
   const wishlist = useSelector(getWish)
   return (
-    <div className='flex items-center justify-between uppercase px-4 py-8 border-b-1 border-stone-500 sm:px-6'
+    <div className='flex items-center justify-between uppercase px-3 py-8 border-b-1 border-stone-500 sm:px-6'
     >
           
       <SearchOrder />

@@ -16,7 +16,7 @@ function AppLayout() {
             
             <div className='overflow-y-scroll bg-zinc-200'>
                     <Header />
-                <main className=' mx-auto sm:px-4 mb-8'>
+                <main className=' mx-auto sm:px-4 mb-16'>
                     <Outlet />
                 </main>
             </div>

@@ -8,11 +8,11 @@ import FilterOperations from "./FilterOperations";
 function Menu() {
   const menu = useLoaderData();
   return <>
-    <div className="flex  items-center justify-between">
+    <div className="flex  items-center justify-between px-3">
       <h1 className='font-bold  text-xs sm:text-2xl sm:flex sm:items-center sm:justify-between mb-4'>Our Dishes</h1>
       <FilterOperations />
     </div>
-    <div className='grid grid-cols-2 gap-4 sm:grid-cols-3 '>
+    <div className='grid grid-cols-2 gap-4 sm:grid-cols-3 px-3'>
       {menu.map(item => <MenuItem item={item} key={item.id} />)}
     </div>
   </>

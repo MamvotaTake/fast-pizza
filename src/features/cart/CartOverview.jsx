@@ -86,7 +86,7 @@ function CartOverview() {
           {username ? <Button type="primary" to="/order/new">Order Now</Button> : <CreateUser />}
         </div>
       </div >
-      <div className="absolute bottom-0 w-full flex justify-between items-center h-10 md:hidden bg-yellow-100 py-6 px-6">
+      <div className="overflow-hidden bottom-0 w-full fixed flex justify-between items-center h-10 md:hidden bg-yellow-50 py-8 px-6">
         <Link to='/'>
           <GrHomeOption className="relative  text-2xl text-gray-0 text-gray-100" />
         </Link>
@@ -109,7 +109,7 @@ function CartOverview() {
         </Modal>
         <Link to='/cart' className="relative right-3">
           <BsCartCheck className="relative right-2 text-2xl text-gray-0" />
-          <span className="absolute bottom-3  bg-yellow-500 text-white font-semibold px-1.5 rounded-full">
+           <span className="absolute bottom-3  bg-yellow-500 text-white font-semibold px-1.5 rounded-full">
             {totalCartQuantity}
           </span>
         </Link>
