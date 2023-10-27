@@ -44,7 +44,7 @@ function Cart() {
   if(!cart.length) return <EmptyCart/>
 
   return (
-    <div className='py-3'>
+    <div className='py-3 px-4'>
       <LinkButton to="/menu">&larr; Back to menu</LinkButton>
 
       <h2 className='mt-7 text-xl font-semibold'>Your cart, {username}</h2>
